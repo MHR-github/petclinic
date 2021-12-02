@@ -1,9 +1,12 @@
-FROM tomcat:latest
+FROM tomcat
 
-LABEL maintainer="mhe"
+ENV   MYSQL_ROOT_PASSWORD: petclinic
+      MYSQL_DATABASE: petclinic
+      MYSQL_USER: petclinic
+      MYSQL_PASSWORD: petclinic
 
-ADD ./target/petclinic.war /usr/local/tomcat/webapps/
+RUN mkdir -p /usr/local/tomcat/webapps/ROOT
 
-EXPOSE 8080
+COPY ./target/petclinic/ /usr/local/tomcat/webapps/ROOT/
 
 CMD ["catalina.sh", "run"]
