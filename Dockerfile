@@ -2,7 +2,7 @@ FROM tomcat:9.0.46
 
 LABEL maintainer="catalina"
 
-COPY ./target/petclinic.war /usr/local/tomcat/webapps/
+COPY ./dist/petclinic.war /usr/local/tomcat/webapps/
 
 EXPOSE 8080
 
