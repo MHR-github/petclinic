@@ -1,4 +1,4 @@
-FROM tomcat
+FROM tomcat:9.0.46
 
 LABEL maintainer="catalina"
 
