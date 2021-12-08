@@ -18,7 +18,7 @@
 
     <!-- ========================= DATASOURCE DEFINITION ========================= -->
 
-    <!-- Configurer that replaces MavenProject: org.springframework.samples:spring-framework-petclinic:5.3.12 @ /opt/petclinic/pom.xml placeholders with values from a properties file -->
+    <!-- Configurer that replaces MavenProject: org.springframework.samples:spring-framework-petclinic:5.3.12 @ C:\\Users\\mo594\\IdeaProjects\\petclinic\\pom.xml placeholders with values from a properties file -->
     <!-- (in this case, JDBC-related settings for the dataSource definition below) -->
     <context:property-placeholder location="classpath:spring/data-access.properties" system-properties-mode="OVERRIDE"/>
 
@@ -26,7 +26,7 @@
     See here for more details on commons-dbcp versus tomcat-jdbc: 
     http://blog.ippon.fr/2013/03/13/improving-the-performance-of-the-spring-petclinic-sample-application-part-3-of-5/-->
     <bean id="dataSource" class="org.apache.tomcat.jdbc.pool.DataSource"
-          p:driverClassName="com.mysql.cj.jdbc.Driver" p:url="jdbc:mysql://localhost:3305/petclinic?useUnicode=true&amp;allowPublicKeyRetrieval=true&amp;serverTimezone=CET"
+          p:driverClassName="com.mysql.cj.jdbc.Driver" p:url="jdbc:mysql://localhost:3306/petclinic?useUnicode=true&amp;allowPublicKeyRetrieval=true&amp;serverTimezone=CET"
           p:username="petclinic" p:password="petclinic123"/>
 
     <!-- Database initializer. If any of the script fails, the initialization stops. -->

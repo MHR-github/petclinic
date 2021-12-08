@@ -26,9 +26,9 @@ cd $PETCLINIC_HOME
 #mvn clean install -DskipTests
 
 #Build petclinic with defult profile and skip unit tests
-mvn clean install -P MySQL -DskipTests
+mvn clean install -P MySQL -D skipTests
 
 
 
 #Deploy petclinic in Tomcat server
-cp $PETCLINIC_HOME/target/petclinic.war $TOMCAT_HOME/webapps/petclinic.war
+cp $PETCLINIC_HOME/target/petclinic.war $TOMCAT_HOME/webapps/ROOT.war

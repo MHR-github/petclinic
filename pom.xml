@@ -44,7 +44,7 @@
         <spring-data.version>2021.1.0-RC1</spring-data.version>
         <hibernate.version>5.6.0.Final</hibernate.version>
         <hibernate-validator.version>6.2.0.Final</hibernate-validator.version>
-        <hsqldb.version>2.5.2</hsqldb.version>
+        <hsqldb.version>2.6.1</hsqldb.version>
         <h2database.version>1.4.200</h2database.version>
 
         <!-- Logging -->
@@ -60,7 +60,7 @@
 
         <!-- JDBC Drivers -->
         <mysql-driver.version>8.0.19</mysql-driver.version>
-        <postgresql-driver.version>9.4.1211.jre7</postgresql-driver.version>
+        <postgresql-driver.version>42.3.1</postgresql-driver.version>
 
         <!-- Others -->
         <jackson.version>2.12.4</jackson.version>
@@ -497,12 +497,7 @@
                 <jdbc.password/>
             </properties>
             <dependencies>
-                <dependency>
-                    <groupId>org.hsqldb</groupId>
-                    <artifactId>hsqldb</artifactId>
-                    <version>${hsqldb.version}</version>
-                    <scope>runtime</scope>
-                </dependency>
+
             </dependencies>
         </profile>
         <profile>
@@ -535,12 +530,7 @@
                 <jdbc.password>petclinic</jdbc.password>
             </properties>
             <dependencies>
-                <dependency>
-                    <groupId>org.postgresql</groupId>
-                    <artifactId>postgresql</artifactId>
-                    <version>${postgresql-driver.version}</version>
-                    <scope>runtime</scope>
-                </dependency>
+
             </dependencies>
         </profile>
    </profiles>
